@@ -1,0 +1,311 @@
+body {
+    background-color: rgb(255, 251, 239);
+    margin: 0;
+    padding: 0;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255,241,135);
+    flex-wrap: nowrap;
+/*    overflow-x: auto;*/
+    
+
+}
+
+.nav {
+    background-color: rgb(255,241,135);
+    width: 100%;
+    position: relative;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0.05vw 0vw;
+}
+
+/* 放大LOGO部分 */
+.nav-logo {
+    width: auto;
+    height: auto;
+    max-width: 55px; 
+}
+
+.nav-logo-wrapper {
+    width: clamp(85px, 22vw, 100px); 
+}
+
+/* 放大标题部分 */
+.site-title {
+    padding-right: 1rem;
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem); 
+    font-weight: 200;
+    color: #333;
+    white-space: nowrap;
+    font-family: 'Monomakh';
+    flex-shrink: 0;
+}
+
+/* 放大导航链接部分 */
+.title-links {
+    display:grid;/*    margin-left:-0.5rem ;*/
+    padding: 0.1%;
+    flex-shrink: 0;
+    font-size: 1.5em; 
+    gap:1.5rem;
+    margin-left: 2rem;
+    
+}
+
+.title-link a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.title-links a:not(:last-child)::after {
+    content: "|";
+    vertical-align:middle;
+    color: #ccc;
+    display: inline-block;
+}
+.mycontainer {
+/*    width:100%;*/
+    display: flex;
+    justify-content: space-between; /* 让元素均匀排列 */
+    gap: 1.5rem; /* 控制年级方块之间的间距 */
+    padding: 2rem; /* 与 introduction 和左右边界的间距 */
+
+}
+
+.mycontainer div {
+/*    width:33%;  */
+/*    float:left;*/
+    flex: 1; /* 让所有年级块均分空间 */
+    max-width: 30%; /* 确保它们不会超出一行 */
+    text-align: center;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+   display: flex;
+    padding: 2rem; /* 让内容更美观 */
+    font-size: 2rem; /* 控制字体大小 */
+    border-radius: 10px; /* 让方块有点圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影增加立体感 */
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* 添加悬浮动画 */
+    width:30vw;
+    height:30vw;
+}
+}
+.eleven{
+/*    align-items: center;*/
+    background-color: green;
+/*
+    width:33%; 
+    padding:0.15%;
+*/
+    font-size: 5vw;
+    
+}
+.twelve{
+/*    align-items: center;*/
+    background-color: yellow;
+/*
+    width:33%; 
+    padding:0.15%;
+*/
+    font-size: 5vw;
+}
+.thirteen
+{
+/*    align-items: center;*/
+    background-color: aqua;
+/*
+    width:33%; 
+    padding:0.15%;
+*/
+    font-size: 5vw;
+}
+/* 悬停时的浮动效果 */
+.mycontainer div:hover {
+    transform: translateY(-10px); /* 轻微上移 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* 增强阴影效果 */
+}
+
+/* 汉堡包按钮 */
+.hamburger-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+}
+
+/* 右侧弹出的设置面板 */
+.settings-panel {
+    position: fixed;
+    top: 0;
+    right: -300px; /* 默认隐藏在右侧 */
+    width: 250px;
+    height: 50vh;
+    background: rgb(255, 241, 135);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    transition: right 0.2s ease-in-out; /* 添加平滑动画 */
+}
+
+/* 设置面板打开状态 */
+.settings-panel.open {
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .branding {
+        gap: 1rem;
+        padding: 0.3rem 2%;
+        height: 60px; /* 原40 → 45 */
+    }
+     
+    .site-title {
+        font-size: clamp(1.3rem, 4.5vw, 1.6rem); /* 原1.1-1.4 → 1.3-1.6 */
+        margin-right: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .title-links {
+        gap: 1.2rem; 
+        padding: 0 2%;
+        font-size: 0.9rem; /* 修正拼写错误 */
+    }
+    
+    
+    .nav-logo {
+        max-width: 45px; /* 原30 → 40 */
+    }
+}
+
+@media (max-width: 480px) {
+    .branding {
+        gap: 0.8rem;
+        padding: 0.5rem 2%;
+    }
+    
+    .nav-logo-wrapper {
+        width: 50px; /* 原40 → 50 */
+    }
+    
+    .site-title {
+        font-size: 1.1rem; /* 原1 → 1.1 */
+        margin-right: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    .title-links {
+        gap: 0.5rem;
+        padding: 0 1rem;
+        font-size: 0.85rem; /* 保持相对比例 */
+        overflow: auto;
+    }
+}
+
+.nav-logo-wrapper,
+.site-title,
+.title-links {
+    height: 35px; 
+    display: flex;
+    align-items: center;
+}   
+.footer{
+        background:linear-gradient(
+            to top,
+            rgb(255,241,135),
+            rgb(255, 251, 239)
+            );
+        width:100%;
+        align-items: center;
+/*        height:100% ;*/
+    min-height: 100px;
+
+}
+.foot{
+    color: black;
+/*    font-size: 1vw;*/
+    font-size: clamp(12px, 1vw, 16px); 
+    padding:1%;
+    font-family:'Monomakh';
+}
+.intro{
+    background-color: rgb(255, 251, 239);
+    padding: 1%;
+    padding: 1%;
+    
+    
+    
+}
+/* 选择题容器 */
+#quiz-container {
+    width: 50%;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#options-container button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 12px;
+    font-size: 16px;
+    background: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#options-container button:hover {
+    background: #bbb;
+}
+
+/* 按钮样式 */
+#next-btn {
+    display: none;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#next-btn:hover {
+    background: #45a049;
+}
+
+/* 反馈文本 */
+#feedback {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+#charts-container {
+    width: 100%; /* 让容器宽度等于整个视口宽度 */
+/*    height: 80vh;  让容器高度占据 80% 视口高度 */
+    display: flex;
+    justify-content: space-around; /* 让饼图均匀分布 */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+canvas {
+    width: 33%;   /* 每个饼图占 1/3 页面 */
+    height: auto; /* 自动适应 */
+    max-width: 370px;
+    max-height: 370px;
+}
