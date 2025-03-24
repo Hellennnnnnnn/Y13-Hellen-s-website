@@ -1,0 +1,61 @@
+<!DOCTYPE html >
+ <html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monomakh">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shafarik">
+        <title>Brain bites</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a website about learning mathematics">
+        <meta name="keywords" content="education,mathematics, New Zealand, Year11 to Year13">
+        <meta name="author" content="Hellen Chen">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="image/icon.jpg">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入 Chart.js -->
+    </head> 
+     <body>
+  <div class='nav'>
+    <div class="branding">
+        <div class="nav-logo-wrapper">
+            <img src="image/logo.png" alt="website Logo" class="nav-logo">
+        </div>
+        <h1 class="site-title">Brain Bites</h1>
+        <div class="title-links">
+            <a href="index.html">home</a>
+
+            <a href="result.html">result</a>
+        </div>
+        
+    </div>
+    <button id="menu-toggle" class="hamburger-btn">☰</button>
+</div>
+
+<!-- 右侧弹出的设置面板 -->
+<div id="settings-panel" class="settings-panel">
+    <h3>setting</h3>
+    <label>
+        <input type="checkbox" id="dark-mode-toggle">
+        dark mode
+    </label>
+    <button id="close-settings">close</button>
+</div>
+          
+         <h1>Quiz Results</h1>
+    <p id="score-text">Loading...</p>
+         <div id="charts-container">
+    <canvas id="quizChart1"></canvas>
+               <canvas id="quizChart2"></canvas>
+               <canvas id="quizChart3" ></canvas><!-- 画布用于绘制饼图 -->
+             </div>
+             
+   
+       
+         
+         <div class='footer'>
+         <a class='foot'>Created by Hellen</a>
+         </div>
+          <script src="result.js"></script> <!-- 载入 JavaScript -->
+         <script src="scripts.js"></script>
+     </body>
+</html>
+    
