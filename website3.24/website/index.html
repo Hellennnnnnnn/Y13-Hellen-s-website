@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Grand+Hotel&display=swap" rel="stylesheet">
+        <title>Brain Bites</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a website about learning mathematics">
+        <meta name="keywords" content="education,mathematics, New Zealand, Year11 to Year13">
+        <meta name="author" content="Hellen Chen">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="image/Logo.png">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+
+        <!-- 这里是导航栏 -->
+        <div class='nav'>
+            <div class="branding">
+                <div class="nav-logo-wrapper">
+                    <img src="image/Logo%20(2).png" alt="website Logo" class="nav-logo">
+                </div>
+
+                <h1 class="site-title">Brain Bites</h1>
+
+                <div class="title-links">
+                    <a href="index.html" style="text-decoration: none;">Home</a>
+                    <a href="result.html" style="text-decoration: none;">Result</a>
+                </div>
+
+            </div>
+
+            <button id="menu-toggle" class="hamburger-btn"> <img src="image/setting%20icon.png" alt="Menu" class="menu-icon">
+            </button>
+
+        </div>
+
+        <!-- 右侧弹出的设置面板 -->
+        <div id="settings-panel" class="settings-panel">
+            <a href="javascript:void(0)" id="close-settings" onclick="closeNav()">x</a>
+            <a href="index.html" style="text-decoration: none;">home</a>
+            <a href="result.html" style="text-decoration: none;">result</a>
+            <!--
+            <label>
+    <input type="checkbox" id="dark-mode-toggle">
+    dark mode
+</label>
+-->
+           
+        </div>
+
+        <div class='intro'>
+            <p>This is a site that will help you build an interest in maths as well as master some basic maths formulas!</p>
+        </div>
+
+        <div class="mycontainer">
+            <div class="eleven">
+                <a href= "year11.html" style="color:rgb(37, 98, 39);font-weight: bold;text-decoration: none;">
+                    Year 11
+                    questions
+                </a>
+                </div>
+            <div class="twelve">
+                <a href="year12.html" style="color:rgb(37, 98, 39);font-weight: bold;text-decoration: none;">
+                    Year 12
+                    questions
+                </a>
+            </div>
+            <div class="thirteen">
+                <a href="year13.html" style="color:rgb(37, 98, 39);font-weight: bold;text-decoration: none;">
+                    Year 13
+                    questions
+                </a>
+            </div>
+        </div>
+
+        <div class='footer'>
+            <a class='foot'>Created by Hellen</a>
+        </div>
+
+        <script src="scripts.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,414 @@
+body {
+    background-color: rgb(255, 251, 239);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255,241,135);
+    flex-wrap: nowrap;
+/*    overflow-x: auto;*/
+}
+
+.nav {
+    background-color: rgb(255,241,135);
+    width: 100%;
+
+    position: relative;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0.05vw 0;
+    
+}
+
+/* 放大LOGO部分 */
+.nav-logo {
+    width: auto;
+    height: auto;
+    max-width: 55px; 
+}
+
+.nav-logo-wrapper {
+    width: clamp(85px, 22vw, 100px); 
+    margin-left: 1vw;
+}
+
+/* 放大标题部分 */
+.site-title {
+    padding-right: 1rem;
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem); 
+    font-weight: 200;
+    color: #333;
+    white-space: nowrap;
+    font-family: 'Grand Hotel';
+    flex-shrink: 0;
+}
+
+/* 放大导航链接部分 */
+.title-links {
+    display:grid;/*    margin-left:-0.5rem ;*/
+    padding: 0.1%;
+    flex-shrink: 0;
+    font-size: 1.5em; 
+    gap:1.5rem;
+    margin-left: 2rem;
+    font-family: 'Funnel Sans';
+   
+    
+    
+}
+
+.title-link a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.title-links a:not(:last-child)::after {
+    content: "|";
+    margin-left: 20px; /* 调整分隔符与文本的距离 */
+    /*margin-right: 10px;  调整分隔符与下一个链接的距离 */
+    vertical-align:middle;
+    color: #ccc;
+    display: inline-block;
+}
+
+
+.mycontainer {
+/*    width:100%;*/
+    display: flex;
+    justify-content: space-between; /* 让元素均匀排列 */
+    gap: 1.5rem; /* 控制年级方块之间的间距 */
+    padding: 2rem; /* 与 introduction 和左右边界的间距 */
+
+}
+
+
+
+.mycontainer div {
+/*    width:33%;  */
+/*    float:left;*/
+    flex: 1; /* 让所有年级块均分空间 */
+    max-width: 30%; /* 确保它们不会超出一行 */
+    text-align: center;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    display: flex;
+    padding: 2rem; /* 让内容更美观 */
+    font-size: 3.5rem; /* 控制字体大小 */
+    
+    /*color:darkgreen;*/
+    border-radius: 10px; /* 让方块有点圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影增加立体感 */
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* 添加悬浮动画 */
+    width:30vw;
+    height:30vw;
+}
+
+.eleven{
+/*    align-items: center;*/
+    background-color:rgb(187, 226, 120) ;
+/*
+    width:33%; 
+    padding:0.15%;
+*/
+    font-size: 5rem;
+    font-family: 'Funnel Sans';
+    
+}
+.twelve{
+/*    align-items: center;*/
+    background-color: rgb(187, 226, 141);
+/*
+    width:33%; 
+    padding:0.15%;
+*/
+    font-size: 5rem;
+    font-family: 'Funnel Sans';
+}
+.thirteen
+{
+/*    align-items: center;*/
+    background-color: rgb(187, 226, 180);
+/*
+    width:33%; 
+    padding:0.15%;
+*/
+    font-size: 5rem;
+      font-family: 'Funnel Sans';
+}
+/* 悬停时的浮动效果 */
+.mycontainer div:hover {
+    transform: translateY(-10px); /* 轻微上移 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* 增强阴影效果 */
+}
+
+/* 汉堡包按钮 */
+.hamburger-btn {
+    font-size: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 5px;
+}
+.menu-icon {
+    width: 50px; /* 调整大小 */
+    height: auto;
+}
+
+/* 右侧弹出的设置面板 */
+.settings-panel {
+    position: fixed;
+    top: 0;
+    right: -300px; /* 默认隐藏在右侧 */
+    width: 250px;
+    height: 50vh;
+    background: rgb(255, 241, 135);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    transition: right 0.2s ease-in-out; /* 添加平滑动画 */
+}
+
+/* 设置面板打开状态 */
+.settings-panel.open {
+    right: 0;
+}
+#close-settings{
+    font-size: 20px;
+    cursor:pointer;
+    color:black;
+    padding:10px 15px;
+    right:0;
+}
+
+#close-settings:hover{
+    background-color: aqua;
+}
+
+
+
+.nav-logo-wrapper,
+.site-title,
+.title-links {
+    height: 35px; 
+    display: flex;
+    align-items: center;
+}   
+
+.intro{
+    background-color: rgb(255, 251, 239);
+    padding: 1%;
+   text-align: center;
+    font-family: 'Funnel Sans';
+    
+    
+    
+}
+/* 选择题容器 */
+ 
+
+/* 按钮样式 */
+#next-btn {
+    display: none;
+    background: rgb(64, 146, 64);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#next-btn:hover {
+    background: #45a049;
+}
+
+/* 反馈文本 */
+#feedback {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+#quiz-container {
+    width: 75%;
+    height: 70vh;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 让问题和选项均匀分布 */
+    position: relative;
+    
+}
+
+#question-text {
+    font-size: 2.5rem; /* 适当缩小字体，避免超出容器 */
+    font-family: 'Funnel Sans';
+    margin-top: 5vh; /* 适当调整间距 */
+    word-wrap: break-word; /* 防止长问题溢出 */
+    text-align: center;
+    width: 90%;
+    position: absolute;
+    top: 20%; /* 让题目垂直居中 */
+    left: 50%; /* 让题目水平居中 */
+    transform: translate(-50%, -50%); /* 精确居中 */
+}
+
+#options-container {
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    justify-content: center; /* 让选项居中对齐 */
+    gap: 10px; /* 让选项之间有适当间距 */
+    width: 100%;
+
+    margin-top: auto; /* 让它自动推到底部 */
+    padding-bottom: 5rem; /* 让选项不会紧贴底部 */
+}
+
+#options-container button {
+    flex: 1 1 calc(50% - 20px); /* 让每个按钮占 50% 的宽度，并留出间距 */
+    max-width: 45%; /* 限制最大宽度，避免超出 */
+    min-width: 200px; /* 防止按钮太小 */
+    padding: 15px; 
+    font-size: 20px;
+    font-family: 'Funnel Sans';
+    background: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: normal; /* 允许换行 */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    
+}
+
+#options-container button:hover {
+    background: #bbb;
+}
+
+/* 在小屏幕（小于 600px）上，选项变成单列 */
+/*
+@media (max-width: 600px) {
+   
+}
+*/
+
+
+#charts-container {
+    width: 100%; /* 让容器宽度等于整个视口宽度 */
+/*    height: 80vh;  让容器高度占据 80% 视口高度 */
+    display: flex;
+    justify-content: space-around; /* 让饼图均匀分布 */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+canvas {
+    width: 33%;   /* 每个饼图占 1/3 页面 */
+    height: auto; /* 自动适应 */
+    max-width: 370px;
+    max-height: 370px;
+}
+
+#score-text{
+    margin-left: 30px;
+}
+
+#tit{
+    margin-left: 20px;
+}
+
+.footer{
+        background:linear-gradient(
+            to top,
+            rgb(255,241,135),
+            rgb(255, 251, 239)
+            );
+        width:100%;
+        align-items: center;
+        min-height: 100px;
+        position: fixed;
+        bottom:0;
+    display: flex;
+    justify-content: flex-end; /* 让内容靠右 */
+}
+.foot{
+    color: black;
+    font-size: clamp(12px, 1vw, 16px); 
+    position: fixed;  /* 固定在页面上 */
+    bottom: 0.5vw;     /* 距离底部 10px */
+    right: 0.5vw;      /* 距离右侧 10px */
+    padding:1%;
+    font-family: 'Funnel Sans';
+}
+@media (max-width: 768px) {
+    .branding {
+        gap: 1rem;
+        padding: 0.3rem 2%;
+        height: 60px; /* 原40 → 45 */
+    }
+     
+    .site-title {
+        font-size: clamp(1.3rem, 4.5vw, 1.6rem); /* 原1.1-1.4 → 1.3-1.6 */
+        margin-right: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .title-links {
+        gap: 1.2rem; 
+        padding: 0 2%;
+        font-size: 0.9rem; /* 修正拼写错误 */
+    }
+    
+    
+    .nav-logo {
+        max-width: 45px; /* 原30 → 40 */
+    }
+}
+
+@media (max-width: 480px) {
+    .branding {
+        gap: 0.8rem;
+        padding: 0.5rem 2%;
+    }
+    
+    .nav-logo-wrapper {
+        width: 50px; /* 原40 → 50 */
+    }
+    
+    .site-title {
+        font-size: 45px; /* 原1 → 1.1 */
+        margin-right: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    .title-links {
+        display: none;
+        /*
+        gap: 0.5rem;
+        padding: 0 1rem;
+        font-size: 0.85rem;  保持相对比例 
+        overflow: auto;
+        */
+    }
+    
+     #options-container button {
+        flex: 1 1 100%; /* 让按钮占满整个宽度 */
+        max-width: 100%;
+    }
+}
+
