@@ -16,7 +16,7 @@ body {
 .nav {
     background-color: rgb(255,241,135);
     width: 100%;
-
+    height: 6.5vw;
     position: relative;
     margin: 0;
     display: flex;
@@ -85,7 +85,8 @@ body {
     display: flex;
     justify-content: space-between; /* 让元素均匀排列 */
     gap: 1.5rem; /* 控制年级方块之间的间距 */
-    padding: 2rem; /* 与 introduction 和左右边界的间距 */
+    padding: 2rem ; /* 与 introduction 和左右边界的间距 */
+    
 
 }
 
@@ -169,30 +170,37 @@ body {
     position: fixed;
     top: 0;
     right: -300px; /* 默认隐藏在右侧 */
-    width: 10vw;
-    height: 15vh;
-    background: rgb(255, 241, 135);
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    width: 16vw;
+    height: 25vh;
+    background:rgb(255, 251, 239);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影增加立体感 */
     padding: 1rem;
     transition: right 0.2s ease-in-out; /* 添加平滑动画 */
     flex-wrap: wrap; /* 允许换行 */
     font-size: 2rem;
+    border-radius: 10px; 
 }
 
 /* 设置面板打开状态 */
 .settings-panel.open {
     right: 0;
-    
+    margin-top: 6.5vw;
+    flex-wrap: wrap; /* 允许换行 */
 }
 .linklink{
-    text-align: center;
+    /*text-align: left ;*/
+    margin-top: 3vw;
+    margin-left: 1.4vw;
+    font-size: 3vw;
+    flex-wrap: wrap; /* 允许换行 */
 }
 #close-settings{
-    font-size: 2vw;
+    font-size: 1.5vw;
     cursor:pointer;
     color:black;
-    padding:1vw 1vw;
-    text-align: left;
+    padding:0.5vw 0.5vw;
+    /*text-align: right;*/
+    float: right;
     /*left:0;*/
 }
 
@@ -212,7 +220,8 @@ body {
 
 .intro{
     background-color: rgb(255, 251, 239);
-    padding: 1%;
+    /*padding: 1%;*/
+    margin-bottom: -1vw;
    text-align: center;
     font-family: 'Funnel Sans';
     color:rgb(92, 92, 92);
@@ -251,6 +260,7 @@ body {
     width: 75%;
     height: 70vh;
     margin: 0 auto;
+    
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -344,17 +354,25 @@ canvas {
 }
 
 .footer{
-        /*
         background:linear-gradient(
-            to top,
-            rgb(255,241,135),
-            rgb(255, 251, 239)
+            180deg,
+            rgb(255,241,135) 15%,
+            rgb(255, 251, 239) 15% 35%,
+            rgb(255,241,135) 35% 55%,
+            rgb(255, 251, 239) 55% 75%,
+            rgb(255,241,135) 75%
+            
+            
+            
             );
-            */
-        background-color: rgb(255,241,135);
+     /*
+     background-size: 100% ;   控制条纹重复的单元尺寸 
+     background-repeat: repeat;
+     */
+        /*background-color: rgb(255,241,135);*/
         width:100%;
         align-items: center;
-        min-height: 100px;
+        min-height: 7vw;
         position: fixed;
         bottom:0;
     display: flex;
@@ -364,7 +382,7 @@ canvas {
     color: black;
     font-size: clamp(12px, 1vw, 16px); 
     position: fixed;  /* 固定在页面上 */
-    bottom: 0.5vw;     /* 距离底部 10px */
+    bottom: 0.05vw;     /* 距离底部 10px */
     right: 0.5vw;      /* 距离右侧 10px */
     padding:1%;
     font-family: 'Funnel Sans';
