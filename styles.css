@@ -8,7 +8,7 @@ body {
 .branding {
     display: flex;
     align-items: center;
-    background-color: rgb(255,241,135);
+    /*background-color: rgb(255,241,135);*/
     flex-wrap: nowrap;
 /*    overflow-x: auto;*/
 }
@@ -16,6 +16,19 @@ body {
 .nav {
     background-color: rgb(255,241,135);
     width: 100%;
+    /*
+    background:linear-gradient(
+            0deg,
+            rgb(255,241,135) 15%,
+            rgb(255, 251, 239) 15% 35%,
+            rgb(255,241,135) 35% 55%,
+            rgb(255, 251, 239) 55% 75%,
+            rgb(255,241,135) 75%
+            
+            
+            
+            );
+            */
     height: 6.5vw;
     position: relative;
     margin: 0;
@@ -64,10 +77,10 @@ body {
 }
 
 .title-links a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    /*background-color: rgba(255, 255, 255, 0.3);*/
+    /*box-shadow: 0 2px 8px rgba(0,0,0,0.1);*/
     transform: translateY(-2px);
-    color: grey;
+    /*color: grey;*/
 }
 
 .title-links a:not(:last-child)::after {
@@ -153,12 +166,17 @@ body {
 
 /* 汉堡包按钮 */
 .hamburger-btn {
-    font-size: 0.5rem;
+    font-size: 2.5rem;
     background: none;
     border: none;
     cursor: pointer;
     margin-left: auto;
     padding: 5px;
+    margin-right: 1vw;
+    color:#4d4c4c;
+}
+.hamburger-btn:hover{
+    color: #b6b6b6;
 }
 .menu-icon {
     width: 55px; /* 调整大小 */
@@ -172,13 +190,16 @@ body {
     right: -300px; /* 默认隐藏在右侧 */
     width: 16vw;
     height: 25vh;
-    background:rgb(255, 251, 239);
+    background-color: rgb(255, 247, 185);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影增加立体感 */
-    padding: 1rem;
+    /*padding: 1rem;*/
     transition: right 0.2s ease-in-out; /* 添加平滑动画 */
     flex-wrap: wrap; /* 允许换行 */
     font-size: 2rem;
     border-radius: 10px; 
+    margin-top: 6.5vw;
+    display: flex;
+    flex-direction: column; /* 让子元素垂直排列 */
 }
 
 /* 设置面板打开状态 */
@@ -186,27 +207,57 @@ body {
     right: 0;
     margin-top: 6.5vw;
     flex-wrap: wrap; /* 允许换行 */
+    z-index: 9999; /* 通常用较大值确保覆盖其他元素 */
+    
 }
 .linklink{
     /*text-align: left ;*/
-    margin-top: 3vw;
-    margin-left: 1.4vw;
+    /*margin-top: 3vw;*/
+    /*margin-left: 1.4vw;*/
     font-size: 3vw;
-    flex-wrap: wrap; /* 允许换行 */
-}
-#close-settings{
-    font-size: 1.5vw;
-    cursor:pointer;
-    color:black;
-    padding:0.5vw 0.5vw;
-    /*text-align: right;*/
-    float: right;
-    /*left:0;*/
+    /*flex-wrap: wrap;  允许换行 */
+    text-align: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column; /* 让子元素垂直排列 */
+    flex-grow: 1; /* 让其填充整个 .settings-panel */
 }
 
-#close-settings:hover{
-    background-color: #d8d8d8;
+.linklink a {
+    width: 100%; /* 让 <a> 填充容器 */
+    background-color: rgb(255, 251, 239); /* 按钮背景颜色 */
+     flex: 1; /* 让每个按钮平分父容器高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center; /* 文字居中 */
+    /*border: 1.5px solid #8b8c8e;  */
+    border-radius: 8px;
+     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+    transition: all 0.3s ease; /* 添加平滑过渡效果 */
+    border: none; /* 移除边框 */
+    margin: 5px; /* 让按钮之间留一点间距 */
+    color:#6d6d6d;
+    /*margin-bottom: 10px;  按钮之间的间距 */
+   
+    /*transition: background-color 0.3s;  悬停时颜色变化 */
 }
+.linklink a:hover {
+    /*background-color: rgb(234, 234, 234);;*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* 悬停时阴影更明显 */
+    transform: translateY(-2px); /* 悬停时稍微上移，增强立体感 */
+}
+
+.linklink a:active {
+    color:black;/* 设置点击时的颜色 */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3); /* 添加按下的凹陷效果 */
+    transform: scale(0.98); /* 让按钮稍微缩小，增加点击感 */
+}
+
+
 
 
 
@@ -354,6 +405,7 @@ canvas {
 }
 
 .footer{
+        /*
         background:linear-gradient(
             180deg,
             rgb(255,241,135) 15%,
@@ -365,14 +417,15 @@ canvas {
             
             
             );
+            */
      /*
      background-size: 100% ;   控制条纹重复的单元尺寸 
      background-repeat: repeat;
      */
-        /*background-color: rgb(255,241,135);*/
+        background-color: rgb(255,241,135);
         width:100%;
         align-items: center;
-        min-height: 7vw;
+        min-height: 4vw;
         position: fixed;
         bottom:0;
     display: flex;
