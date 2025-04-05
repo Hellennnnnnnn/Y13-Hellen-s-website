@@ -200,6 +200,7 @@ body {
     margin-top: 6.5vw;
     display: flex;
     flex-direction: column; /* 让子元素垂直排列 */
+    
 }
 
 /* 设置面板打开状态 */
@@ -221,17 +222,18 @@ body {
     width: 100%;
     flex-direction: column; /* 让子元素垂直排列 */
     flex-grow: 1; /* 让其填充整个 .settings-panel */
+    /*padding: 0.5%*/
 }
 
 .linklink a {
-    width: 100%; /* 让 <a> 填充容器 */
+    width: 95%; /* 让 <a> 填充容器 */
     background-color: rgb(255, 251, 239); /* 按钮背景颜色 */
      flex: 1; /* 让每个按钮平分父容器高度 */
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center; /* 文字居中 */
     /*border: 1.5px solid #8b8c8e;  */
@@ -291,7 +293,7 @@ body {
     color: white;
     border: none;
     padding: 10px 15px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     margin-top: 15px;
 }
@@ -302,16 +304,16 @@ body {
 
 /* 反馈文本 */
 #feedback {
-    font-size: 18px;
+    font-size: 0.8rem;
     font-weight: bold;
 }
 
 
 #quiz-container {
     width: 75%;
-    height: 70vh;
+    height: 65vh;
     margin: 0 auto;
-    
+    margin-top: 3vw;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -353,8 +355,8 @@ body {
     flex: 1 1 calc(50% - 20px); /* 让每个按钮占 50% 的宽度，并留出间距 */
     max-width: 45%; /* 限制最大宽度，避免超出 */
     min-width: 200px; /* 防止按钮太小 */
-    padding: 15px; 
-    font-size: 20px;
+    padding: 1.2rem; 
+    font-size: 1.5rem;
     font-family: 'Funnel Sans';
     background: #ddd;
     border: none;
@@ -372,12 +374,7 @@ body {
     background: #bbb;
 }
 
-/* 在小屏幕（小于 600px）上，选项变成单列 */
-/*
-@media (max-width: 600px) {
-   
-}
-*/
+
 
 
 #charts-container {
@@ -405,23 +402,7 @@ canvas {
 }
 
 .footer{
-        /*
-        background:linear-gradient(
-            180deg,
-            rgb(255,241,135) 15%,
-            rgb(255, 251, 239) 15% 35%,
-            rgb(255,241,135) 35% 55%,
-            rgb(255, 251, 239) 55% 75%,
-            rgb(255,241,135) 75%
-            
-            
-            
-            );
-            */
-     /*
-     background-size: 100% ;   控制条纹重复的单元尺寸 
-     background-repeat: repeat;
-     */
+       
         background-color: rgb(255,241,135);
         width:100%;
         align-items: center;
@@ -468,32 +449,147 @@ canvas {
 @media (max-width: 480px) {
     .branding {
         gap: 0.8rem;
-        padding: 0.5rem 2%;
+        padding: 0.5rem 10vw;
+        margin-top: 0;
+        height: 20vw;
+    }
+    .nav{
+        height: 15vw;
+        margin-top: 0;
     }
     
     .nav-logo-wrapper {
-        width: 50px; /* 原40 → 50 */
+        width: 40xpx; /* 原40 → 50 */
+        margin-left: -5vw;
     }
     
     .site-title {
         font-size: 45px; /* 原1 → 1.1 */
-        margin-right: 0.5rem;
-        padding-right: 0.5rem;
+        /*margin-right: 0.5rem;*/
+        /*padding-right: 0.5rem;*/
+        text-align: center;
+        align-content: center;
+        margin-left: 3vw;
     }
     
     .title-links {
         display: none;
-        /*
-        gap: 0.5rem;
-        padding: 0 1rem;
-        font-size: 0.85rem;  保持相对比例 
-        overflow: auto;
-        */
+       
     }
     
      #options-container button {
         flex: 1 1 100%; /* 让按钮占满整个宽度 */
         max-width: 100%;
     }
+    #score-text {
+        display: none;
+        
+    }
+    .footer{
+        position:fixed;
+        height:5vh;
+        bottom:0;
+        
+    }
+    .foot{
+        position: fixed;
+        bottom:0;
+    }
+    .settings-panel.open {
+        margin-top: 15vw;
+        width:35vw;
+        height:15vh;
+    }
+    .settings-panel{
+        margin-top: 15vw;
+        width:-100px;
+        height:15vh;
+    }
+    
+    .linklink a {
+        font-size: 1rem;
+    }
+    .linklink a:hover {
+    /*background-color: rgb(234, 234, 234);;*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* 悬停时阴影更明显 */
+    transform: translateY(-2px); /* 悬停时稍微上移，增强立体感 */
+}
+
+.linklink a:active {
+    color:black;/* 设置点击时的颜色 */
+    background-color: rgb(234, 234, 234);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3); /* 添加按下的凹陷效果 */
+    transform: scale(0.98); /* 让按钮稍微缩小，增加点击感 */
+}
+    .mycontainer{
+       display: flex;
+        flex-direction: column;
+     
+        align-items: center;
+        
+        
+    
+    }
+    .mycontainer div {
+        max-width: 65%;  /* 让方块更大一些，占满屏幕 */
+        width: 90vw;
+        /*height: 110vw;*/
+        margin-bottom: 2vw;
+    }
+    
+    .eleven a{
+        font-size: 2.5rem;
+        text-align:center;
+        /*width:70vw;*/
+        height:18vw;
+         /*flex-wrap: wrap;*/
+    }
+    .twelve a{
+        font-size: 2.5rem;
+        /*width:70vw;*/
+        height:18vw;
+ 
+    }
+    .thirteen a{
+        font-size: 2.5rem;
+        /*width:70vw;*/
+        height:18vw;
+    }
+    .intro{
+        font-size: 1rem;
+        margin-bottom: -5vw;;
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+    #quiz-container{
+        justify-content: center;
+        align-content: center;
+        margin-top: 7vw;
+        height: 115vw;
+        /*margin-bottom: 13vw;*/
+    }
+    #question-text {
+        font-size: 1.6rem;
+        top:10%;
+    }
+     #options-container {
+        margin-top:43vw;
+        /*margin-bottom: -10vw;*/
+         /*padding:0.5rem;*/
+        
+    }
+    #options-container button {
+        height:auto;
+        font-size: 1.3rem;
+        /*align-content: center;*/
+        /*justify-content: center;*/
+        text-align: center;
+    }
+    #next-btn {
+ margin-top: -15vw;
+        margin-bottom: -3vw;
+    font-size: 0.8rem;
+    
+}
 }
 
