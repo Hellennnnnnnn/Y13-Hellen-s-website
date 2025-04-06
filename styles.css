@@ -1,8 +1,10 @@
 body {
     background-color: rgb(255, 251, 239);
+    /*background-color: white;*/
     margin: 0;
     padding: 0;
     height: 100%;
+  
 }
 
 .branding {
@@ -16,25 +18,13 @@ body {
 .nav {
     background-color: rgb(255,241,135);
     width: 100%;
-    /*
-    background:linear-gradient(
-            0deg,
-            rgb(255,241,135) 15%,
-            rgb(255, 251, 239) 15% 35%,
-            rgb(255,241,135) 35% 55%,
-            rgb(255, 251, 239) 55% 75%,
-            rgb(255,241,135) 75%
-            
-            
-            
-            );
-            */
+    
     height: 6.5vw;
     position: relative;
     margin: 0;
     display: flex;
     align-items: center;
-    padding: 0.05vw 0;
+    /*padding: 0.05vw 0;*/
     
 }
 
@@ -52,8 +42,8 @@ body {
 
 /* 放大标题部分 */
 .site-title {
-    padding-right: 1rem;
-    font-size: clamp(1.2rem, 2.2vw, 1.8rem); 
+    padding-right: 0.5rem;
+    font-size:3vw;
     font-weight: 200;
     color: #333;
     white-space: nowrap;
@@ -64,10 +54,10 @@ body {
 /* 放大导航链接部分 */
 .title-links {
     display:grid;/*    margin-left:-0.5rem ;*/
-    padding: 0.1%;
+    /*padding: 0.1%;*/
     flex-shrink: 0;
     font-size: 1.5em; 
-    gap:1.5rem;
+    /*gap:1.5rem;*/
     margin-left: 2rem;
     font-family: 'Funnel Sans';
     color: black;
@@ -75,18 +65,24 @@ body {
     
     
 }
+.title-links a{
+    color:black;
+}
 
 .title-links a:hover {
     /*background-color: rgba(255, 255, 255, 0.3);*/
     /*box-shadow: 0 2px 8px rgba(0,0,0,0.1);*/
+    color:#979797;
+   
+    
     transform: translateY(-2px);
     /*color: grey;*/
 }
 
-.title-links a:not(:last-child)::after {
+.title-links a:after {
     content: "|";
-    margin-left: 20px; /* 调整分隔符与文本的距离 */
-    /*margin-right: 10px;  调整分隔符与下一个链接的距离 */
+    margin-left: 1.5vw; /* 调整分隔符与文本的距离 */
+    margin-right: 1.5vw;
     vertical-align:middle;
     color: #ccc;
     display: inline-block;
@@ -171,8 +167,8 @@ body {
     border: none;
     cursor: pointer;
     margin-left: auto;
-    padding: 5px;
-    margin-right: 1vw;
+    padding: 2.2vw;
+    margin-right: 0;
     color:#4d4c4c;
 }
 .hamburger-btn:hover{
@@ -314,7 +310,8 @@ body {
     height: 65vh;
     margin: 0 auto;
     margin-top: 3vw;
-    background: white;
+   
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -456,20 +453,27 @@ canvas {
     .nav{
         height: 15vw;
         margin-top: 0;
+        width:100%;
     }
     
+    .hamburger-btn {
+        font-size: 1.3rem;
+        font-weight: bold;
+        /*margin-right: 5vw;*/
+    }
     .nav-logo-wrapper {
-        width: 40xpx; /* 原40 → 50 */
+        width: 7vw; /* 原40 → 50 */
         margin-left: -5vw;
     }
     
     .site-title {
-        font-size: 45px; /* 原1 → 1.1 */
+        font-size: 10vw; /* 原1 → 1.1 */
         /*margin-right: 0.5rem;*/
         /*padding-right: 0.5rem;*/
         text-align: center;
         align-content: center;
-        margin-left: 3vw;
+        justify-content: center;
+        margin-left: 8vw;
     }
     
     .title-links {
@@ -487,12 +491,12 @@ canvas {
     }
     .footer{
         position:fixed;
-        height:5vh;
-        bottom:0;
+        height:5vw;
+        margin-bottom:0;
         
     }
     .foot{
-        position: fixed;
+        position: relative;
         bottom:0;
     }
     .settings-panel.open {
@@ -522,7 +526,7 @@ canvas {
     transform: scale(0.98); /* 让按钮稍微缩小，增加点击感 */
 }
     .mycontainer{
-       display: flex;
+       /*display: flex;*/
         flex-direction: column;
      
         align-items: center;
@@ -535,28 +539,42 @@ canvas {
         width: 90vw;
         /*height: 110vw;*/
         margin-bottom: 2vw;
+        
     }
-    
+    /*
+    .eleven{
+        height:20vw;
+    }
+    .twelve{
+         height:13vw;
+    }
+    .thirteen{
+         height:13vw;
+    }
+    */
     .eleven a{
-        font-size: 2.5rem;
-        text-align:center;
+        font-size: 8vw;
+        /*text-align:center;*/
         /*width:70vw;*/
-        height:18vw;
+         height:18vw;
+       
          /*flex-wrap: wrap;*/
     }
     .twelve a{
-        font-size: 2.5rem;
+        font-size: 8vw;
         /*width:70vw;*/
-        height:18vw;
+         height:18vw;
+        
  
     }
+    
     .thirteen a{
-        font-size: 2.5rem;
+        font-size: 8vw;
         /*width:70vw;*/
         height:18vw;
     }
     .intro{
-        font-size: 1rem;
+        font-size: 5vw;
         margin-bottom: -5vw;;
         margin-left: 2vw;
         margin-right: 2vw;
@@ -564,32 +582,48 @@ canvas {
     #quiz-container{
         justify-content: center;
         align-content: center;
-        margin-top: 7vw;
-        height: 115vw;
+        margin-top: 12vw;
+        margin-bottom: 12vw;
+        height:auto;
         /*margin-bottom: 13vw;*/
     }
     #question-text {
-        font-size: 1.6rem;
+        font-size: 5vw;
         top:10%;
     }
      #options-container {
         margin-top:43vw;
         /*margin-bottom: -10vw;*/
          /*padding:0.5rem;*/
+         text-align: center;
+         align-content: center;
         
     }
     #options-container button {
-        height:auto;
-        font-size: 1.3rem;
+        height:14vw;
+        font-size: 4vw;
         /*align-content: center;*/
         /*justify-content: center;*/
         text-align: center;
+        align-content: center;
     }
     #next-btn {
- margin-top: -15vw;
-        margin-bottom: -3vw;
-    font-size: 0.8rem;
+ margin-top: -13vw;
+        margin-bottom:0;
+    font-size: 0.7rem;
+        padding:1.7vw;
     
 }
+    #feedback {
+    font-size: 0.5rem;
+        margin-top: 2vw;
+        
+    }
+    #charts-container{
+        margin-bottom: 8vw;
+    }
+    .only{
+        display:none;
+    }
 }
 
