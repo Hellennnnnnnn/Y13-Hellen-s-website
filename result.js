@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "Quiz 2": "Year 12",
     "Quiz 3": "Year 13"
     };
-    
+ 
     // 预定义固定顺序（左：Quiz 1，中：Quiz 2，右：Quiz 3）
     const fixedOrder = ["Quiz 1", "Quiz 2", "Quiz 3"];
     let latestResults = { "Quiz 1": null, "Quiz 2": null, "Quiz 3": null };
@@ -30,6 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const ctx2 = document.getElementById("quizChart2").getContext("2d");
     const ctx3 = document.getElementById("quizChart3").getContext("2d");
 
+    // 动态计算字体大小的函数
+const getResponsiveFontSize = () => {
+  const screenWidth = window.innerWidth;
+  // 根据屏幕宽度动态计算（示例逻辑）
+  if (screenWidth < 480) return 12;
+  if (screenWidth < 768) return 14;
+  if (screenWidth < 1024) return 20;
+  return 25;
+};
     function drawPieChart(ctx, quizName, correct, incorrect) {
         new Chart(ctx, {
             type: "pie",
@@ -47,13 +56,20 @@ document.addEventListener("DOMContentLoaded", function () {
                         display: true,
                         text: quizTitles[quizName] || quizName,
                         font:{
-                        size:25
+                        size:getResponsiveFontSize() // 初始计算
                     }
                     }
                 }
             }
         });
     }
+    // 监听窗口变化更新字体
+window.addEventListener("resize", () => {
+  const newSize = getResponsiveFontSize();
+  // 更新配置并重渲染（假设是图表库如 Chart.js）
+  chartConfig.options.font.size = newSize;
+  chartInstance.update(); // 如果是 Chart.js，需要调用 update()
+});
 
     // 确保 Quiz 1 在左侧，Quiz 2 在中间，Quiz 3 在右侧
     if (quiz1) drawPieChart(ctx1, "Quiz 1", quiz1.score, quiz1.total - quiz1.score);
