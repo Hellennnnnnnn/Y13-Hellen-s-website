@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     let results = JSON.parse(localStorage.getItem("quizResults")) || [];
-
     if (results.length === 0) {
         document.getElementById("score-text").textContent = "No quiz results available.";
         return;
@@ -11,17 +10,17 @@ document.addEventListener("DOMContentLoaded", function () {
     "Quiz 2": "Year 12",
     "Quiz 3": "Year 13"
     };
- 
-    // 预定义固定顺序（左：Quiz 1，中：Quiz 2，右：Quiz 3）
-    const fixedOrder = ["Quiz 1", "Quiz 2", "Quiz 3"];
+
+    // Define the display positions of the three results in advance (left: Quiz 1， In the middle: Quiz 2， Right: Quiz 3）
+    //const fixedOrder = ["Quiz 1", "Quiz 2", "Quiz 3"];
     let latestResults = { "Quiz 1": null, "Quiz 2": null, "Quiz 3": null };
 
-    // 按照固定顺序填充数据（最新数据覆盖旧数据）
+    // Fill in data in a fixed order (with the latest data overwriting the old data)
     results.forEach(result => {
         latestResults[result.quizName] = result;
     });
 
-    // 获取每个 Quiz 结果（没有数据则填充空白）
+    // Get each Quiz result (fill in blanks if there is no data)
     const quiz1 = latestResults["Quiz 1"];
     const quiz2 = latestResults["Quiz 2"];
     const quiz3 = latestResults["Quiz 3"];
@@ -30,10 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const ctx2 = document.getElementById("quizChart2").getContext("2d");
     const ctx3 = document.getElementById("quizChart3").getContext("2d");
 
-    // 动态计算字体大小的函数
+    // Function for dynamically calculating font size
 const getResponsiveFontSize = () => {
   const screenWidth = window.innerWidth;
-  // 根据屏幕宽度动态计算（示例逻辑）
+  // Dynamically calculate based on screen width
   if (screenWidth < 480) return 12;
   if (screenWidth < 768) return 14;
   if (screenWidth < 1024) return 20;
@@ -56,19 +55,19 @@ const getResponsiveFontSize = () => {
                         display: true,
                         text: quizTitles[quizName] || quizName,
                         font:{
-                        size:getResponsiveFontSize() // 初始计算
-                    }
+                            size:getResponsiveFontSize() // Initial calculation
+                        }
                     }
                 }
             }
         });
     }
-    // 监听窗口变化更新字体
+    // Monitor window changes and update fonts
 window.addEventListener("resize", () => {
   const newSize = getResponsiveFontSize();
-  // 更新配置并重渲染（假设是图表库如 Chart.js）
+  // Update configuration and re render (assuming it is a chart library such as result.js)
   chartConfig.options.font.size = newSize;
-  chartInstance.update(); // 如果是 Chart.js，需要调用 update()
+  chartInstance.update(); // If it is result.js, you need to call update()
 });
 
     // 确保 Quiz 1 在左侧，Quiz 2 在中间，Quiz 3 在右侧

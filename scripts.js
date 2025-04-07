@@ -1,8 +1,4 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
-    
-    
 
     const menuToggle = document.getElementById("menu-toggle");
     const settingsPanel = document.getElementById("settings-panel");
@@ -24,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentQuestionIndex = 0;
     let score = 0;
-    let answered = false;  // 新增变量，检查是否已经回答
+    let answered = false;  // Add a new variable and check if it has been answered
 
     const questionText = document.getElementById("question-text");
     const optionsContainer = document.getElementById("options-container");
@@ -34,18 +30,18 @@ document.addEventListener("DOMContentLoaded", function () {
     function loadQuestion() {
         const currentQuestion = questions[currentQuestionIndex];
         questionText.textContent = currentQuestion.text;
-        optionsContainer.innerHTML = "";// 清空之前的选项
-        answered = false; // 每次加载新问题时重置
+        optionsContainer.innerHTML = "";// Clear previous options
+        answered = false; // Reset every time a new issue is loaded
 
         currentQuestion.options.forEach(option => {
             const button = document.createElement("button");
             button.textContent = option.label;
             button.addEventListener("click", function(){
-                if (!answered) {  // 只有在未回答的情况下才能点击
-                    answered = true;  // 标记为已回答
+                if (!answered) {  // Only click if there is no answer
+                    answered = true;  // Mark as answered
                     checkAnswer(option.value, currentQuestion.correct);
                 }
-            } );
+            });
             
             optionsContainer.appendChild(button);
         });
@@ -55,15 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function checkAnswer(selected, correct) {
-         const buttons = optionsContainer.querySelectorAll("button");
+        const buttons = optionsContainer.querySelectorAll("button");
         buttons.forEach(button => {
-            button.disabled = true; // 一旦回答，禁用所有选项
+        button.disabled = true; // Once answered, disable all options
         });
         if (selected === correct) {
             feedbackText.textContent = "✅ Correct!";
             feedbackText.style.color = "rgb(22, 88, 22)";
             score++;
-        } else {
+        } 
+        else {
             feedbackText.textContent = "❌ Wrong!";
             feedbackText.style.color = "rgb(214, 66, 66)";
         }
@@ -74,10 +71,11 @@ document.addEventListener("DOMContentLoaded", function () {
         let existingResultIndex = results.findIndex(result => result.quizName === currentQuizName);
 
         if (existingResultIndex !== -1) {
-            // 如果当前测验已存在，则更新分数
+            // If the current test already exists, update the score
             results[existingResultIndex] = { quizName: currentQuizName, score, total: questions.length };
-        }else {
-        results.push({ quizName: currentQuizName, score, total: questions.length });
+        }
+        else {
+            results.push({ quizName: currentQuizName, score, total: questions.length });
         }
         localStorage.setItem("quizResults", JSON.stringify(results));
     }
@@ -85,23 +83,23 @@ document.addEventListener("DOMContentLoaded", function () {
             currentQuestionIndex++;
             if (currentQuestionIndex < questions.length) {
                 loadQuestion();
-                feedback.textContent = ""; // 清除上一个问题的反馈信息
-            } else {
+                feedback.textContent = ""; // Once answered, disable all options
+            } 
+            else {
 
 
-            localStorage.setItem("quizScore", score);
-            localStorage.setItem("totalQuestions", questions.length);
+                localStorage.setItem("quizScore", score);
+                localStorage.setItem("totalQuestions", questions.length);
 
-            window.location.href = "result.html";
-                questionText.textContent = `Quiz Completed! 🎉 Your score: ${score}/${questions.length}`;
-            optionsContainer.innerHTML = "";
-            nextButton.style.display = "none";
+                window.location.href = "result.html";
+                    questionText.textContent = `Quiz Completed! 🎉 Your score: ${score}/${questions.length}`;
+                optionsContainer.innerHTML = "";
+                nextButton.style.display = "none";
 
-            // 保存结果
-            saveResult();
-        }
-    });
-        loadQuestion();
-    
-    
+                // Save the Results
+                saveResult();
+            }
+        });
+
+        loadQuestion(); 
 });

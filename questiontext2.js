@@ -1,4 +1,3 @@
-// 结构化存储题目（支持富文本、图片等复杂内容）
 let currentQuizName = "Quiz 2"; 
 const questions = [
   {
@@ -21,7 +20,7 @@ const questions = [
       { value: "c", label: "C. 6x+1" },
       { value: "d", label: "D. 3x²-4" },
     ],
-      correct: "a"  
+    correct: "a"  
   },
  {
     id: 3,
@@ -32,7 +31,7 @@ const questions = [
       { value: "c", label: "C. 12" },
       { value: "d", label: "D. 14" },
     ],
-     correct: "a"  
+    correct: "a"  
   },
     {
     id: 4,
@@ -43,7 +42,7 @@ const questions = [
       { value: "c", label: "C. tanθ" },
       { value: "d", label: "D. sin(2θ)" },
     ],
-        correct: "b"  
+    correct: "b"  
   },
     {
     id: 5,
@@ -54,7 +53,7 @@ const questions = [
       { value: "c", label: "C. π/4, 3π/4" },
       { value: "d", label: "D. π/2" },
     ],
-        correct: "a"  
+    correct: "a"  
   },
     {
     id: 6,
@@ -65,7 +64,7 @@ const questions = [
       { value: "c", label: "C. 99.7%" },
       { value: "d", label: "D. 50%" },
   ],
-        correct: "b"  
+    correct: "b"  
     },
     {
     id: 7,
@@ -76,7 +75,7 @@ const questions = [
       { value: "c", label: "C. 0.1" },
       { value: "d", label: "D.0.58" },
     ],
-correct: "a"  
+    correct: "a"  
   },
     {
     id: 8,
@@ -87,7 +86,7 @@ correct: "a"
       { value: "c", label: "C.18" },
       { value: "d", label: "D. 12" },
     ],
-        correct: "a"  
+    correct: "a"  
   },
     {
     id: 9,
@@ -98,7 +97,7 @@ correct: "a"
       { value: "c", label: "C. Correct answer" },
       { value: "d", label: "D. Sign error" },
     ],
-        correct: "a"  
+    correct: "a"  
   },
     {
     id: 10,
@@ -109,7 +108,7 @@ correct: "a"
       { value: "c", label: "C.8" },
       { value: "d", label: "D.6" },
     ],
-        correct: "a"  
+    correct: "a"  
   },
     
 ];

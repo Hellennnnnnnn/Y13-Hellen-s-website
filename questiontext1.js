@@ -1,4 +1,3 @@
-// 结构化存储题目（支持富文本、图片等复杂内容）
 let currentQuizName = "Quiz 1"; 
 const questions = [
   {
@@ -11,8 +10,8 @@ const questions = [
       { value: "d", label: "D. x=6" },
     ],
     correct: "b" , 
-    selected: null, // 记录用户选择
-    answered: false // 是否已回答
+    selected: null, // Record user selection
+    answered: false // Have you already answered
   },
   {
     id: 2,
@@ -23,9 +22,9 @@ const questions = [
       { value: "c", label: "C. (x+5)(x+1)" },
       { value: "d", label: "D. (x+4)(x+2)" },
     ],
-      correct: "b", 
-    selected: null, // 记录用户选择
-    answered: false // 是否已回答  
+    correct: "b", 
+    selected: null, 
+    answered: false  
   },
  {
     id: 3,
@@ -36,9 +35,9 @@ const questions = [
       { value: "c", label: "C. 7cm" },
       { value: "d", label: "D. 12cm" },
     ],
-     correct: "a", 
-    selected: null, // 记录用户选择
-    answered: false // 是否已回答  
+    correct: "a", 
+    selected: null, 
+    answered: false  
   },
     {
     id: 4,
@@ -49,9 +48,9 @@ const questions = [
       { value: "c", label: "C. πd" },
       { value: "d", label: "D. 2πr" },
     ],
-        correct: "d", 
-    selected: null, // 记录用户选择
-    answered: false // 是否已回答  
+    correct: "d", 
+    selected: null, 
+    answered: false 
   },
     {
     id: 5,
@@ -62,9 +61,9 @@ const questions = [
       { value: "c", label: "C. 9" },
       { value: "d", label: "D. 10" },
     ],
-        correct: "b", 
-    selected: null, // 记录用户选择
-    answered: false // 是否已回答  
+    correct: "b", 
+    selected: null,
+    answered: false 
   },
     {
     id: 6,
@@ -75,9 +74,9 @@ const questions = [
       { value: "c", label: "C. 1/2" },
       { value: "d", label: "D. 2/3" },
   ],
-        correct: "c", 
-    selected: null, // 记录用户选择
-    answered: false // 是否已回答  
+    correct: "c", 
+    selected: null,
+    answered: false  
     },
     {
     id: 7,
@@ -88,9 +87,9 @@ const questions = [
       { value: "c", label: "C. Base + Height" },
       { value: "d", label: "D. π×Radius²" },
     ],
-correct: "b", 
-    selected: null, // 记录用户选择
-    answered: false // 是否已回答  
+    correct: "b", 
+    selected: null, 
+    answered: false 
   },
     {
     id: 8,
@@ -101,9 +100,9 @@ correct: "b",
       { value: "c", label: "C.y=mx+c" },
       { value: "d", label: "D. 1/2×Base×Height" },
     ],
-        correct: "a", 
-    selected: null, // 记录用户选择
-    answered: false // 是否已回答  
+    correct: "a", 
+    selected: null, 
+    answered: false 
   },
     {
     id: 9,
@@ -114,9 +113,9 @@ correct: "b",
       { value: "c", label: "C. Did not multiply 2 into the bracket" },
       { value: "d", label: "D. Did not rearrange terms" },
     ],
-        correct: "c", 
-    selected: null, // 记录用户选择
-    answered: false // 是否已回答  
+    correct: "c", 
+    selected: null, 
+    answered: false  
   },
     {
     id: 10,
@@ -127,9 +126,9 @@ correct: "b",
       { value: "c", label: "C.x−0.8=16 → x=16.8" },
       { value: "d", label: "D. x/0.8=16 → x=12.8" },
     ],
-        correct: "a", 
-    selected: null, // 记录用户选择
-    answered: false // 是否已回答  
+    correct: "a", 
+    selected: null, 
+    answered: false 
   },
     
 ];

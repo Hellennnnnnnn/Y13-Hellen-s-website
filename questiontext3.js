@@ -1,4 +1,3 @@
-// 结构化存储题目（支持富文本、图片等复杂内容）
 let currentQuizName = "Quiz 3"; 
 const questions = [
   {
@@ -21,7 +20,7 @@ const questions = [
       { value: "c", label: "C. y=2e⁻³ˣ" },
       { value: "d", label: "D. y=3x+2" },
     ],
-      correct: "a"  
+    correct: "a"  
   },
  {
     id: 3,
@@ -32,7 +31,7 @@ const questions = [
       { value: "c", label: "C. ∣z∣=√2, arg(z)=π/4" },
       { value: "d", label: "D. ∣z∣=4,arg(z)=π/3" },
     ],
-     correct: "a"  
+    correct: "a"  
   },
     {
     id: 4,
@@ -43,7 +42,7 @@ const questions = [
       { value: "c", label: "C. z=±2" },
       { value: "d", label: "D. z=±2i" },
     ],
-        correct: "d"  
+    correct: "d"  
   },
     {
     id: 5,
@@ -54,7 +53,7 @@ const questions = [
       { value: "c", label: "C. 0.13%" },
       { value: "d", label: "D. 5%" },
     ],
-        correct: "a"  
+    correct: "a"  
   },
     {
     id: 6,
@@ -65,7 +64,7 @@ const questions = [
       { value: "c", label: "C. π/3, 2π/3" },
       { value: "d", label: "D. π/4, 5π/4" },
   ],
-        correct: "a"  
+    correct: "a"  
     },
     {
     id: 7,
@@ -76,7 +75,7 @@ const questions = [
       { value: "c", label: "C. π/2" },
       { value: "d", label: "D. 5π/4" },
     ],
-correct: "a"  
+    correct: "a"  
   },
     {
     id: 8,
@@ -87,7 +86,7 @@ correct: "a"
       { value: "c", label: "C.−xcosx−sinx+C" },
       { value: "d", label: "D. xsinx+cosx+C" },
     ],
-        correct: "a"  
+    correct: "a"  
   },
     {
     id: 9,
@@ -98,7 +97,7 @@ correct: "a"
       { value: "c", label: "C. 6(cos(π/9)+i sin(π/9))" },
       { value: "d", label: "D. 6(cos(π/6)+i sin(π/6))" },
     ],
-        correct: "a"  
+    correct: "a"  
   },
     {
     id: 10,
@@ -109,7 +108,7 @@ correct: "a"
       { value: "c", label: "C.Forgot the product rule" },
       { value: "d", label: "D.Misapplied chain rule" },
     ],
-        correct: "c"  
+    correct: "c"  
   },
     
 ];
