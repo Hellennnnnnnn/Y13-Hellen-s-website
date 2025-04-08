@@ -523,13 +523,14 @@ canvas {
     
     .footer{
         position:fixed;
-        height:5vw;
+        height:7vw;
         margin-bottom:0;
     }
     
     .foot{
         position: relative;
         bottom:0;
+        font-size: 2vw;
     }
     
     .settings-panel.open {
